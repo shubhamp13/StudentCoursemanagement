@@ -1,0 +1,47 @@
+ body {
+    background-image: url(one.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center content */
+    height: 100vh; /* Take up the full viewport height */
+}
+
+.container {
+    width: 90%; /* Increase the width */
+    max-width: 1000px; /* Limit maximum width */
+    border: 5px solid #73AD21;
+    padding: 60px; /* Increase padding for more space */
+    background-color: antiquewhite;
+    text-align: center; /* Center text */
+}
+p{
+    font-size: 1em; /* Increase font size */
+    margin-bottom: 40px; /* Add more space below */
+}
+h3
+{
+    font-size: 2em; /* Increase font size */
+    margin-bottom: 40px; /* Add more space below */
+}
+h1 {
+    font-weight: bold;
+    color: rgb(45, 22, 128);
+    font-size: 4em; /* Increase font size */
+    margin-bottom: 40px; /* Add more space below */
+}
+
+.links a {
+    margin: 0 20px; /* Increase margin for more spacing between links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    font-size: 1.5em; /* Increase font size */
+}
+
+.links a:hover {
+    font-size: 1.6em; /* Increase font size on hover */
+    text-transform: uppercase;
+}
+ 

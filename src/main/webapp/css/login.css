@@ -1,0 +1,57 @@
+body {
+    background-image: url(one.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center content */
+    height: 100vh; /* Take up the full viewport height */
+}
+
+.container {
+    width: 500px; /* Increased width */
+    padding: 50px; /* Increased padding */
+    border: 4px solid #333; /* Slightly thicker border */
+    border-radius: 20px; /* Increased border radius */
+    background-color: rgba(200, 200, 200, 0.95); /* Increased transparency */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Increased shadow */
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em; /* Increased font size */
+    margin-bottom: 40px; /* Increased margin bottom */
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px; /* Increased margin bottom */
+    font-size: 1.3em; /* Increased font size */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"], /* Add email type styling */
+input[type="submit"] {
+    width: calc(100% - 20px); /* Adjusted width to accommodate padding */
+    padding: 15px; /* Increased padding */
+    margin-bottom: 30px; /* Increased margin bottom */
+    font-size: 1.3em; /* Increased font size */
+    border: 3px solid #ccc; /* Slightly thicker border */
+    border-radius: 8px;
+    box-sizing: border-box; /* This ensures padding and border are included in the width */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
