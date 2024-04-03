@@ -1,8 +1,6 @@
 package servlets;
 
 import java.io.IOException;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,15 +10,15 @@ import dao.StudentDao;
 import dto.Student;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class UpdateServlet
  */
-public class LoginServlet extends HttpServlet {
+public class UpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public UpdateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,7 +27,8 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		processRequest(request, response);
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -41,30 +40,9 @@ public class LoginServlet extends HttpServlet {
 	protected void processRequest(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException
 	{
 		String emailId=req.getParameter("email");
-		String password=req.getParameter("password");
-		StudentDao dao=new StudentDao();
-		Student dbStudent=dao.getStudent(emailId);
-		if(dbStudent!=null)
-		{
-			if(dbStudent.getPassword().equals(password))
-			{
-				req.setAttribute("student",dbStudent);
-				RequestDispatcher dispatcher=req.getRequestDispatcher("welcome.jsp");
-				dispatcher.forward(req, resp);
-			}
-			else
-			{
-				req.setAttribute("message","Invalid Password!!");
-				RequestDispatcher dispatcher=req.getRequestDispatcher("login.jsp");
-				dispatcher.include(req, resp);
-			}
-		}
-		else
-		{
-			req.setAttribute("message","First Register Yourself Then Login!!!");
-			RequestDispatcher dispatcher=req.getRequestDispatcher("register.jsp");
-			dispatcher.forward(req, resp);
-		}
+		Student dbStudent=new StudentDao().getStudent(emailId);
+		req.setAttribute("student", dbStudent);
+		resp.sendRedirect("update.jsp");
 	}
 
 }

@@ -1,7 +1,10 @@
 package dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import dto.Student;
 
@@ -24,5 +27,11 @@ public class StudentDao
 		EntityManager entityManager=getEntityManager();
 		Student student=entityManager.find(Student.class,email);
 		return student;
+	}
+	public List<Student>getStudents()
+	{
+		EntityManager entityManager=getEntityManager();
+		Query query=entityManager.createQuery("select s from Student s");
+		return query.getResultList();
 	}
 }

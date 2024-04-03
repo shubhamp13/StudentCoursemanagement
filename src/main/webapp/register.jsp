@@ -25,7 +25,9 @@
 		<form action="register" method="post">
 			<label for="username">Username:</label> <input type="text"
 				name="username"><br> <label for="email">Email
-				Id:</label> <input type="email" name="email"></br> <label for="phoneno">Contact
+				Id:</label> <input type="email" name="email"></br> 
+				<label for="address">Address</label>
+            <input type="text" name="address"><label for="phoneno">Contact
 				No:</label> <input type="tel" name="phoneno"><br> <label
 				for="password">Password:</label> <input type="password"
 				name="password"><br> <input type="submit"

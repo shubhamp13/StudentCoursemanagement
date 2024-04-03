@@ -44,4 +44,9 @@ h1 {
     font-size: 1.6em; /* Increase font size on hover */
     text-transform: uppercase;
 }
+.navbar
+{
+ background-color: black;
+}
+ 
  

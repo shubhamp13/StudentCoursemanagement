@@ -46,12 +46,14 @@ public class RegisterServlet extends HttpServlet {
 		String emailId=req.getParameter("email");
 		String phoneNo=req.getParameter("phoneno");
 		String password=req.getParameter("password");
+		String address=req.getParameter("address");
 		
 		Student student=new  Student();
 		student.setEmailId(emailId);
 		student.setName(userName);
 		student.setPassword(password);
 		student.setPhoneNo(phoneNo);
+		student.setAddress(address);
 		StudentDao dao=new StudentDao();
 		if(dao.getStudent(emailId)!=null)
 		{

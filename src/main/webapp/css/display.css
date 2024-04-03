@@ -1,0 +1,43 @@
+body {
+    background-image: url('display.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+    color: #000000; /* Dark font color */
+    font-size: 1.3em;
+}
+h1
+{
+    font-size: 3em;
+    text-align: center;
+    color: rgb(84, 9, 155);
+}
