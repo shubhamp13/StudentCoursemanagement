@@ -31,6 +31,8 @@
 					<td><%=student.getAddress()%></td>
 					<td><%=student.getPhoneNo()%></td>
 					<td><%=student.getPassword()%></td>
+					<td><a href="update?email=<%=student.getEmailId()%>">Update</a></td>
+					<td><a href="delete?email=<%=student.getEmailId()%>">Delete</a></td>
 				</tr>
 
 			</table>
